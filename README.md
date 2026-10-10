@@ -1,25 +1,103 @@
-<<<<<<< HEAD
-# ResearchHive frontend (HTML, CSS, JavaScript)
+# ResearchHive 🔎
 
-## Run it
-1. Extract the ZIP file.
-2. Open the `researchhive-frontend` folder in VS Code.
-3. Open `index.html` in your browser. You can also use the VS Code Live Server extension.
+**Discover research. Organize ideas. Keep exploring.**
 
-## What works right now
-- Dashboard layout and workflow overview
-- Create research projects
-- View recent projects and all projects
-- Search projects
-- Open project details and delete projects
-- Save project details in this browser using `localStorage`
-- Responsive layout for smaller screens
+ResearchHive is a research discovery platform that helps users find academic papers by topic, organize research projects, and save relevant papers in one place.
 
-## What is not connected yet
-This is frontend-only. It does **not** have a backend API or database server connected yet. `localStorage` is browser storage for this prototype; it is not the same as our planned SQLite database. The next step is to build a Node.js + Express API, then replace the localStorage functions in `script.js` with `fetch()` requests to that API.
+> Built to make exploring academic research a little more organized.
 
-No Gemini API key is needed for this frontend.
-=======
-# ResearchHive
-A research discovery platform that helps users find academic papers by topic using the OpenAlex API.
->>>>>>> f50c9893ad5e0934c4a8749fec1f363660e4d95b
+## ✨ Features
+
+- **Research Projects** — Create, search, view, and delete projects.
+- **Paper Discovery** — Search academic publications by topic using OpenAlex.
+- **Saved Papers** — Keep relevant papers organized under research projects.
+- **Local Storage** — Store projects and saved papers in an SQLite database.
+- **Dashboard** — View your projects and track saved papers.
+
+## 🛠️ Built With
+
+| Frontend | Backend | Data |
+| --- | --- | --- |
+| HTML | Node.js | SQLite |
+| CSS | Express.js | OpenAlex API |
+| JavaScript | better-sqlite3 | |
+
+## 📁 Project Structure
+
+```text
+ResearchHive/
+├── frontend/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── backend/
+│   ├── server.js
+│   ├── database.js
+│   ├── package.json
+│   └── package-lock.json
+├── .gitignore
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) and npm
+- A web browser
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sandrinaarthur1-alt/ResearchHive.git
+cd ResearchHive
+```
+
+### 2. Install backend dependencies
+
+```bash
+cd backend
+npm install
+```
+
+### 3. Start the backend
+
+```bash
+npm start
+```
+
+The API runs locally at `http://localhost:5000`.
+
+### 4. Open the frontend
+
+Open `frontend/index.html` in your browser, or use the VS Code Live Server extension.
+
+Keep the backend running while using the application.
+
+## 💾 Data Storage
+
+ResearchHive uses SQLite to store research projects and saved papers locally. The database is created by the backend when needed.
+
+Local database files are excluded from Git, so cloning the repository starts with a separate local database.
+
+## 🗺️ Roadmap
+
+- [x] Research project management
+- [x] Academic paper search
+- [x] Save papers to projects
+- [ ] AI-assisted paper summaries
+- [ ] Research gap exploration
+- [ ] Research planning tools
+- [ ] Public deployment
+
+## 📚 Research Data
+
+Paper discovery is powered by [OpenAlex](https://openalex.org/), an open catalog of scholarly works.
+
+## 📌 Project Status
+
+**In development.** ResearchHive is an evolving project, with more research and organization features planned.
+
+---
+
+*Built as a learning project exploring web development and academic research tools.*
